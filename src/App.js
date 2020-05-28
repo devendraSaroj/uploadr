@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FileUpload from './components/fileUpload/FileUpload'
+import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CropImage from './components/cropImage/CropImage';
+import ViewImage from './components/viewImage/ViewImage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <React.Fragment>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={FileUpload} />
+          <Route path='/crop' component={CropImage} />
+          <Route path='/albums' component={ViewImage} />
+        </Switch>
+      </React.Fragment>
+    </BrowserRouter>
   );
 }
 
