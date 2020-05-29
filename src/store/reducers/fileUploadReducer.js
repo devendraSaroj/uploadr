@@ -19,8 +19,7 @@ const fileUploadReducer = (state = initState, action) => {
             console.log("reducer", action.state)
             return action.state
     }
-    return state
-    
+    return state 
 }
 
 export default fileUploadReducer

@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <div className="nav">
             <div className="logo">
-            <Link to="/"><li>Uploadr</li></Link>
+            <Link to="/uploadr"><li>Uploadr</li></Link>
             </div>
             <div className="nav__items">
                 <Link to="/albums">

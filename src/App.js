@@ -14,6 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={FileUpload} />
+          <Route path='/uploadr' component={FileUpload} />
           <Route path='/crop' component={CropImage} />
           <Route path='/albums' component={ViewImage} />
         </Switch>

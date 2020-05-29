@@ -1,9 +1,8 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './style.css'
 import {connect} from 'react-redux'
 import {cropResultUpdate, insertFolderName} from '../../store/actions/action'
 import firebase from 'firebase'
-// import config from '../../firebase_config'
 import Cropper from 'react-cropper';
 import 'cropperjs/dist/cropper.css';
 import { Redirect } from 'react-router-dom'
@@ -16,6 +15,7 @@ function CropImage(props) {
         progress: 0,
         uploading: false,
         redirect: false,
+        mobile: false,
     }) 
 
    
@@ -26,6 +26,19 @@ function CropImage(props) {
     var images = [imageElement1, imageElement2, imageElement3, imageElement4];
 
     const {state, cropState} = props
+
+    useEffect(() => {
+        window.addEventListener('resize', resize())
+    }, [result.mobile])
+
+    function resize() {
+        if( window.innerWidth < 848) {
+            setResult({...result, mobile: true})
+        }
+        else {
+            setResult({...result, mobile: false})
+        }
+    }
 
     const dimensions = [
         {
@@ -117,7 +130,7 @@ function CropImage(props) {
                     <Cropper 
                         ref={images[index]}
                         src={props.state.image}
-                        style={{height: 600, width: '100%', objectFit:'contain !important'}}
+                        style={{height: result.mobile ? '50vh' : '80vh', width: '100%', objectFit:'contain !important'}}
                         zoomable={false}
                         movable={false}
                         scalable={false}

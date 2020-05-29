@@ -72,6 +72,15 @@ function FileUpload(props) {
 
     return (
         <div className="App">
+            <div className="instruction__msg">
+                <h3>How it works?</h3>
+                <ol >
+                    <li style={{listStyle:'decimal'}}>Takes an image of resolution 1024x1024.</li>
+                    <li>Crops into 4 different resolution.</li>
+                    <li>Uploads all 4 cropped images to cloud.</li>
+                    <li>Head over to Album section to view all uploaded images.</li>
+                </ol>
+            </div>
             <div className="file__select__container">
                 <div className="drag__section">
                     
