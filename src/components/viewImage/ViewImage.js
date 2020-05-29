@@ -16,25 +16,16 @@ function ViewImage(props) {
 
     const {folders} = props
 
-    if(folders) {
+    if(folders && !res.isShowing) {
         setTimeout(() => {
             setRes({isShowing:true})
         }, 3000)
     }
-
-    // if(folders) {
-    //     setTimeout(() => {
-    //         console.log("aabjhsbj")
-    //         window.location.reload()
-    //     }, 2000)
-    //     setRes({...res, reload:false})
-    // }
         
     function getImages(refName, index) {
         var storageRef = firebase.storage().ref(refName);
         storageRef.listAll().then(function(res) {
             res.items.forEach(function(itemRef) {
-                console.log("getImage")
                 displayImage(itemRef, index);
             });
         }).catch(function(error) {

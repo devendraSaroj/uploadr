@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom'
 import {connect}  from 'react-redux'
 
 
-
-
 function FileUpload(props) {
     
     const fileInput = useRef()
