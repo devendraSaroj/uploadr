@@ -21,6 +21,7 @@ function FileUpload(props) {
         img_width: null,
         img_height: null,
         image_showing: false,
+        isImgSize1024: false,
     })
 
     function formatBytes(bytes, decimals = 2) {
@@ -55,7 +56,13 @@ function FileUpload(props) {
     
 
     const handleDimension = () => {
-        props.updateImage(state)
+        if (state.img_width === 1024 && state.img_height === 1024) {
+            setState({...state, isImgSize1024:true});
+            props.updateState(state)
+        }
+        else {
+            setState({...state, isImgSize1024:false});
+        } 
     }
 
 
@@ -117,7 +124,7 @@ function FileUpload(props) {
 
             {
                 
-                state.image_showing ?
+                state.image_showing && state.isImgSize1024 ?
                 <Link to="/crop">
                 <button 
                     type="submit"  
@@ -130,7 +137,7 @@ function FileUpload(props) {
                 <button 
                     type="submit"  
                     className="upload__btn"
-                    onClick={() => alert("Select an image to proceed.")}> 
+                    onClick={() => state.image_showing && !state.isImgSize1024 ? alert('image must be 1024x1024') : alert("Select an image to proceed.") }> 
                     Proceed 
                 </button>
                 
@@ -141,7 +148,7 @@ function FileUpload(props) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        updateImage: (state) => dispatch(stateUpdate(state))
+        updateState: (state) => dispatch(stateUpdate(state))
     }
 }
 
