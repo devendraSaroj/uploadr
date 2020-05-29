@@ -5,13 +5,13 @@
 
 
   var firebaseConfig = {
-    apiKey: "AIzaSyAhfBmFqXaSsj78-R6lWr11bRqQnzQat88",
-    authDomain: "uploadr-eafc7.firebaseapp.com",
-    databaseURL: "https://uploadr-eafc7.firebaseio.com",
-    projectId: "uploadr-eafc7",
-    storageBucket: "uploadr-eafc7.appspot.com",
-    messagingSenderId: "1090532930086",
-    appId: "1:1090532930086:web:cec6e44850d2de071cace7"
+    apiKey: "AIzaSyCNC8ZPDnTikKHsGyRGTyWRzkVCM11WrXY",
+    authDomain: "uploadr-aad62.firebaseapp.com",
+    databaseURL: "https://uploadr-aad62.firebaseio.com",
+    projectId: "uploadr-aad62",
+    storageBucket: "uploadr-aad62.appspot.com",
+    messagingSenderId: "827240999669",
+    appId: "1:827240999669:web:bd4c63ce88a0d2aeeaf3bc"
   };
 
   firebase.initializeApp(firebaseConfig);

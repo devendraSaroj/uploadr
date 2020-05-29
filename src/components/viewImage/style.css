@@ -56,6 +56,14 @@
     flex: 22%;
 }
 
+.loading__message  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 60vh;
+}
+
 @media screen and (max-width: 53em) {
     .album__container {
         padding: 1rem;
@@ -78,5 +86,10 @@
 
     .album__card img {
         padding: 0 0.8px;
+    }
+
+    .loading__message  {
+        font-size: 1rem;
+        height: 80vh;
     }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 import Placeholder1 from '../../media/placeholder.png'
 import Placeholder2 from '../../media/vertical_placeholder.png'
@@ -9,7 +9,26 @@ import { compose } from 'redux';
 
 function ViewImage(props) {
 
+    const[res, setRes] = useState({
+        isShowing: false,
+        reload: false
+    });
+
     const {folders} = props
+
+    if(folders) {
+        setTimeout(() => {
+            setRes({isShowing:true})
+        }, 3000)
+    }
+
+    // if(folders) {
+    //     setTimeout(() => {
+    //         console.log("aabjhsbj")
+    //         window.location.reload()
+    //     }, 2000)
+    //     setRes({...res, reload:false})
+    // }
         
     function getImages(refName, index) {
         var storageRef = firebase.storage().ref(refName);
@@ -48,8 +67,9 @@ function ViewImage(props) {
 
     return (
         <div className="album__container">
-            <h2>Albums</h2>
-            {folders && folders.map((folder, index) => {
+            { folders && res.isShowing ? <h2>Albums</h2> : null }
+            { folders && res.isShowing ?
+             folders.map((folder, index) => {
                 getImages(('images/'+folder.name).toString(), index)
                 return (
                 <div className="album__card" key={index}>
@@ -71,7 +91,13 @@ function ViewImage(props) {
                     </div>
                 </div>
                 )
-            })}
+            })
+            :
+            <div className="loading__message">
+                Loading...
+            </div>
+        }
+            
         </div>
     )
 }

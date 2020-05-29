@@ -16,8 +16,8 @@ function CropImage(props) {
         uploading: false,
         redirect: false,
         mobile: false,
+        
     }) 
-
    
     const imageElement1 = useRef()
     const imageElement2 = useRef()
@@ -81,11 +81,15 @@ function CropImage(props) {
                storageRef.child(selfFolder).getDownloadURL()
                 .then(url => {
                     if(selfFolder === (dimensions[3].width+"X"+dimensions[3].height).toString()) {
-                        setResult({...result, uploading: false, redirect: true})
+                        setTimeout(() => {
+                            setResult({...result, uploading: false, redirect: true})
+                        }, 2000)
                     }
-                    else {
-                        setResult({...result, uploading: false})
-                    }
+                    // else {
+                    //     setTimeout(() => {
+                    //         setResult({...result, uploading: false})
+                    //     }, 5000)
+                    // }
                 })
             }
         )
