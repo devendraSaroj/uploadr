@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/uploadr/static/css/main.b9cc5774.chunk.css",
-    "main.js": "/uploadr/static/js/main.20a530ba.chunk.js",
-    "main.js.map": "/uploadr/static/js/main.20a530ba.chunk.js.map",
-    "runtime-main.js": "/uploadr/static/js/runtime-main.19bd573f.js",
-    "runtime-main.js.map": "/uploadr/static/js/runtime-main.19bd573f.js.map",
+    "main.css": "/uploadr/static/css/main.854c96c3.chunk.css",
+    "main.js": "/uploadr/static/js/main.f763e630.chunk.js",
+    "main.js.map": "/uploadr/static/js/main.f763e630.chunk.js.map",
+    "runtime-main.js": "/uploadr/static/js/runtime-main.fb0b61fa.js",
+    "runtime-main.js.map": "/uploadr/static/js/runtime-main.fb0b61fa.js.map",
     "static/css/2.34dcc6c8.chunk.css": "/uploadr/static/css/2.34dcc6c8.chunk.css",
-    "static/js/2.30c577f1.chunk.js": "/uploadr/static/js/2.30c577f1.chunk.js",
-    "static/js/2.30c577f1.chunk.js.map": "/uploadr/static/js/2.30c577f1.chunk.js.map",
+    "static/js/2.09013225.chunk.js": "/uploadr/static/js/2.09013225.chunk.js",
+    "static/js/2.09013225.chunk.js.map": "/uploadr/static/js/2.09013225.chunk.js.map",
     "index.html": "/uploadr/index.html",
-    "precache-manifest.b01c23cf91cda42260e8a28ec7132e09.js": "/uploadr/precache-manifest.b01c23cf91cda42260e8a28ec7132e09.js",
+    "precache-manifest.736ac8cf707abe701d5a4f33be0453d9.js": "/uploadr/precache-manifest.736ac8cf707abe701d5a4f33be0453d9.js",
     "service-worker.js": "/uploadr/service-worker.js",
     "static/css/2.34dcc6c8.chunk.css.map": "/uploadr/static/css/2.34dcc6c8.chunk.css.map",
-    "static/css/main.b9cc5774.chunk.css.map": "/uploadr/static/css/main.b9cc5774.chunk.css.map",
-    "static/js/2.30c577f1.chunk.js.LICENSE.txt": "/uploadr/static/js/2.30c577f1.chunk.js.LICENSE.txt",
+    "static/css/main.854c96c3.chunk.css.map": "/uploadr/static/css/main.854c96c3.chunk.css.map",
+    "static/js/2.09013225.chunk.js.LICENSE.txt": "/uploadr/static/js/2.09013225.chunk.js.LICENSE.txt",
     "static/media/placeholder.png": "/uploadr/static/media/placeholder.a80f490e.png",
     "static/media/upload.cd995de6.svg": "/uploadr/static/media/upload.cd995de6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.19bd573f.js",
+    "static/js/runtime-main.fb0b61fa.js",
     "static/css/2.34dcc6c8.chunk.css",
-    "static/js/2.30c577f1.chunk.js",
-    "static/css/main.b9cc5774.chunk.css",
-    "static/js/main.20a530ba.chunk.js"
+    "static/js/2.09013225.chunk.js",
+    "static/css/main.854c96c3.chunk.css",
+    "static/js/main.f763e630.chunk.js"
   ]
 }
