@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './style.css'
 import Placeholder1 from '../../media/placeholder.png'
 import Placeholder2 from '../../media/vertical_placeholder.png'
@@ -24,7 +24,7 @@ function ViewImage(props) {
     }
 
     function displayImage(imageRef, index) {
-        var aptImg, modalImg;
+        var aptImg;
         switch(imageRef.name) {
             case '755X450': aptImg = document.getElementById("img"+(4*index+1));
             break;
@@ -34,6 +34,8 @@ function ViewImage(props) {
             break;
             case '380X380': aptImg = document.getElementById("img"+(4*index+4));
             break;
+            default:
+                break;
         }
         imageRef.getDownloadURL().then(function(url) {
             aptImg.src = url;

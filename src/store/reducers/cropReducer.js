@@ -21,7 +21,8 @@ const cropReducer = (state = initState, action) => {
                 case 2: return {...state, img3: action.image}
                 case 3: return {...state, img4: action.image}
             }
-        case 'INSERT_FOLDER': return {...state, folderNames: array.unshift(action.name)}         
+            break;
+        case 'INSERT_FOLDER': return {...state, folderNames: array.unshift(action.name)}    
         default: return {...state};
     }
 }

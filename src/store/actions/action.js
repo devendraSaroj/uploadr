@@ -1,5 +1,4 @@
 
-
 // updates the fileUpload.js state to store
 export const stateUpdate = (state) => {
     return (dispatch, getState) => {
@@ -9,7 +8,6 @@ export const stateUpdate = (state) => {
 
 // updates the cropped preview data from CropImage.js to store
 export const cropResultUpdate = (image, index) => {
-    console.log("image, index", index)
     return (dispatch, getState) => {
         dispatch({
             type: 'CROP_RES_UPDATE',

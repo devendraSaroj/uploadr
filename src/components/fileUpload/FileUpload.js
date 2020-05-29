@@ -12,8 +12,6 @@ function FileUpload(props) {
     
     const fileInput = useRef()
     
-    const dimensions = ['755 x 450', '365 x 450', '365 x 212', '380 x 380'];
-
     const [state, setState] = useState({
         image: null,
         img_name: null,
@@ -56,22 +54,20 @@ function FileUpload(props) {
     
 
     const handleDimension = () => {
-        if (state.img_width === 1024 && state.img_height === 1024) {
-            setState({...state, isImgSize1024:true});
-            props.updateState(state)
-        }
-        else {
-            setState({...state, isImgSize1024:false});
-        } 
+        props.updateState(state)
     }
-
 
     const getImgSize = (imgSrc) => {
         var newImg = new Image();
         newImg.onload = function() {
           var height = newImg.height;
           var width = newImg.width;
-          setState({...state, img_width: width, img_height: height})
+          if (width === 1024 && height === 1024) {
+            setState({...state,img_width: width, img_height: height, isImgSize1024:true});
+          }
+          else {
+            setState({...state,img_width: width, img_height: height});
+          } 
         }
         newImg.src = imgSrc; // this must be done AFTER setting onload
     }

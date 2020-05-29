@@ -94,7 +94,6 @@ function CropImage(props) {
     const handleUpload = (e) => {
         var imageFile = [];
         props.insertFolder(state.img_name.toString().split(".")[0])
-        console.log("cropState",cropState)
         for (var i = 0; i < dimensions.length; i++) {
             imageFile[i] = getImgSrc(i);
             var selfFolder = (dimensions[i].width+"X"+dimensions[i].height).toString()
@@ -136,6 +135,7 @@ function CropImage(props) {
                         scalable={false}
                         dragMode={"move"}
                         viewMode={2}
+                        // cropmove={'move'}
                         responsive={true}
                         cropBoxResizable={false}
                         minCropBoxWidth={200}
@@ -145,7 +145,7 @@ function CropImage(props) {
                     />
                 </div>
                 <div className="preview__and__btn">
-                    <img className="img__preview" src={getImgSrc(index)} />
+                    <img className="img__preview" src={getImgSrc(index)} alt="" />
                     <div className="preview__lable">Preview</div>
                     <div className="img__details" >
                         <h6>{props.state.img_name}</h6>

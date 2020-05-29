@@ -16,7 +16,6 @@ const initState = {
 const fileUploadReducer = (state = initState, action) => {
     switch (action.type) {
         case 'STATE_UPDATE':
-            console.log("reducer", action.state)
             return action.state
     }
     return state 

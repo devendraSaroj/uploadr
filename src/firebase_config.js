@@ -2,6 +2,8 @@
   import 'firebase/firestore'
 
 
+
+
   var firebaseConfig = {
     apiKey: "AIzaSyAhfBmFqXaSsj78-R6lWr11bRqQnzQat88",
     authDomain: "uploadr-eafc7.firebaseapp.com",
