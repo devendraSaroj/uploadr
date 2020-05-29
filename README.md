@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Visit the site
 
-In the project directory, you can run:
+https://devendrasaroj.github.io/uploadr
 
-### `npm start`
+### Pages
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Select image page<br />
+Crop page<br />
+Album page
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+### `Select image page`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+User can select an image file, and then page extracts the iformation out of that image, e.g. name, resolution and size of the image and displays the same.<br />
+Once image selected, user can click on "Proceed" button at the bottom and it will run a short check if image's resolution is of 1024x1-24 or not. <br />
+If not 1024x1024 It will show an alert saying "image must be 1024x1024". <br />
+It also runs the check for whether any image file is selected or it is null.
+### `Crop page`
+Crops the image in 4 different resolution: <br />
+horizontal : 755 x 450 <br />
+vertical : 365 x 450 <br />
+horizontal small : 365 x 212 <br />
+gallery : 380 x 380 <br />
+It provides the user with 4 different `cropper` with their corresponding `preview area`.<br />
+With the help of preview user can have an idea about the output image that the cropper will produce in the end. <br />
+Each cropper crops for the different `image resolution` that can be seen below preview area.<br />
+And then it upload all 4 cropped images to the cloud on clicking `Upload All` button
 
-### `npm run build`
+### `Upload image page`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It fetches all the uploaded images and list them by grouping the cropped images from same image file. <br />
+Images are shown in the most recent order. Meaning that the most recenty uploaded images will be shown on the top. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### `Tech stack used`
+**ReactJS** - for the frontend design
+**Redux** - for the global state management 
+**Firebase** storage - for saving the image to the cloud
+**Firebase firestore Real time database** - for storing the data about image

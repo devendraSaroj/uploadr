@@ -107,6 +107,7 @@ function FileUpload(props) {
                     <input 
                     id="input"
                     type="file" 
+                    accept="image/*"
                     style={{display: 'none'}} 
                     ref={fileInput}
                     onChange={handleImage}
