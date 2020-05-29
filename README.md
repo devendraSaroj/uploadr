@@ -34,7 +34,7 @@ Images are shown in the most recent order. Meaning that the most recenty uploade
 
 
 ### `Tech stack used`
-**ReactJS** - for the frontend design
-**Redux** - for the global state management 
-**Firebase** storage - for saving the image to the cloud
+**ReactJS** - for the frontend design <br />
+**Redux** - for the global state management <br />
+**Firebase** storage - for saving the image to the cloud <br />
 **Firebase firestore Real time database** - for storing the data about image
